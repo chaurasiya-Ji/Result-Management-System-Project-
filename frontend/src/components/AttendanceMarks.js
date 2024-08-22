@@ -49,7 +49,7 @@ const AttendanceMarks = () => {
         value={attendanceMarks}
         onChange={(e) => setAttendanceMarks(e.target.value)}
       />
-      <button onClick={updateMarks}>Update Marks</button>
+      <button className="btn btn-dark" onClick={updateMarks}>Update Marks</button>
     </div>
   );
 };

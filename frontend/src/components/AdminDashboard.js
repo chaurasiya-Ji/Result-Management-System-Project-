@@ -24,13 +24,13 @@ const navigate = useNavigate();
  
   return (
     <>
-      <div className="logOutBtn">
+      <div className="btn btn-danger logOutBtn">
         <LogoutButton handleLoginStatusChange={handleLoginStatusChange} />
       </div>
       <div className="dashboard-container">
-        <h1>Admin Dashboard</h1>
+        <h1 className="text-light">Admin Dashboard</h1>
 
-        <div className="tabs">
+        <div className="tabs  m-3 ">
           <button
             className={activeTab === "attendance" ? "active" : ""}
             onClick={() => setActiveTab("attendance")}
