@@ -1,0 +1,25 @@
+
+.about-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.about-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-container p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 15px;
+    }
+}
