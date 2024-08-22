@@ -38,25 +38,59 @@ const AdminLogin = ({ handleLoginStatusChange }) => {
       setError("An error occurred. Please try again.");
     }
   };
-
+const handleform=(event)=>{
+  event.preventDefault();
+}
   return (
-    <div className="login-container">
-      <h2>Admin Login</h2>
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={(handleLogin)}>Login</button>
-      {error && <p className="error-message">{error}</p>}
-    </div>
+    <>
+      <div className="container text-light">
+        <div className="row justify-content-center">
+          <div className="col-md-10 col-lg-12 my-con">
+            <h2 className="text-center mt-4 text-primary">Admin Login</h2>
+            <form onSubmit={handleform}>
+              <div className="mb-3">
+                <label htmlFor="username" className="form-label">
+                  User Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  className="form-control"
+                  id="username"
+                  aria-describedby="emailHelp"
+                />
+               
+              </div>
+              <div className="mb-3">
+                <label htmlFor="exampleInputPassword1" className="form-label">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  className="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+              
+              <button
+                className="btn btn-primary btn-lg w-100 mb-3 mt-3"
+                onClick={handleLogin}
+              >
+                LogIn
+              </button>
+              {error && <p className="error-message">{error}</p>}
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+    </>
   );
 };
 

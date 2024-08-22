@@ -1,13 +1,35 @@
+
 .logout-button {
-    background-color: #ff4b5c;
-    color: white;
-    border: none;
+    display: inline-block;
     padding: 10px 20px;
-    cursor: pointer;
     font-size: 16px;
+    color: white;
+    background-color: #dc3545;
+    /* Bootstrap's danger color */
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .logout-button:hover {
-    background-color: #e63946;
+    background-color: #c82333;
+    /* Slightly darker shade of the danger color */
+}
+
+.logout-button:active {
+    background-color: #bd2130;
+    /* Even darker shade */
+    transform: scale(0.98);
+}
+
+.logout-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.5);
+    /* Red shadow for focus state */
+}
+
+.logout-button:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
 }

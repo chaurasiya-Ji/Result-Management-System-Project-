@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import AdminLogin from "./components/AdminLogin";
 import Results from "./components/Results";
 import About from "./components/About.js"
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
    const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(

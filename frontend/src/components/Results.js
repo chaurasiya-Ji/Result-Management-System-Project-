@@ -56,43 +56,53 @@ const resultSectionRef = useRef(null);
           value={studentId}
           onChange={(e) => setStudentId(e.target.value)}
         />
-        <button onClick={handleSearch} disabled={loading}>
+        <button
+          className="btn btn-outline-primary"
+          onClick={handleSearch}
+          disabled={loading}
+        >
           {loading ? "Searching..." : "Search"}
         </button>
 
         {error && <p className="error-message">{error}</p>}
 
         {results && (
-          <div ref={resultSectionRef}  className="results-details">
+          <div ref={resultSectionRef} className="results-details">
             <h1 className="institute-name">Lucknow Institute of Technology</h1>
             <h3>Results for Student ID: {results.studentId}</h3>
             <table className="results-table">
               <thead>
                 <tr>
                   <th>Subject</th>
-                  <th>Marks</th>
+                  <th>Obt.</th>
+                  <th>Max</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>Attendance Marks</td>
                   <td>{results.attendanceMarks}</td>
+                  <td>100</td>
                 </tr>
                 <tr>
                   <td>Project Review Marks</td>
                   <td>{results.projectReviewMarks}</td>
+                  <td>100</td>
                 </tr>
                 <tr>
                   <td>Assessment Marks</td>
                   <td>{results.assessmentMarks}</td>
+                  <td>100</td>
                 </tr>
                 <tr>
                   <td>Project Submission Marks</td>
                   <td>{results.projectSubmissionMarks}</td>
+                  <td>100</td>
                 </tr>
                 <tr>
                   <td>LinkedIn Post Marks</td>
                   <td>{results.linkedinPostMarks}</td>
+                  <td>100</td>
                 </tr>
                 <tr>
                   <td>Total Marks</td>
@@ -102,8 +112,8 @@ const resultSectionRef = useRef(null);
                       results.assessmentMarks +
                       results.projectReviewMarks +
                       results.attendanceMarks}
-                    /500
                   </td>
+                  <td>500</td>
                 </tr>
                 <tr>
                   <td>Percentage</td>
@@ -118,12 +128,25 @@ const resultSectionRef = useRef(null);
                     ).toFixed(2)}
                     %
                   </td>
+                  <td></td>
                 </tr>
               </tbody>
             </table>
             <div className="result-actions">
-              <button onClick={handlePrint}>Print</button>
+              <button className="btn btn-success" onClick={handlePrint}>
+                Print
+              </button>
             </div>
+
+            <button
+              type="button"
+              onClick={() => {
+                setResults(null);
+              }}
+              class="btn btn-link"
+            >
+              Check Another result
+            </button>
           </div>
         )}
       </div>

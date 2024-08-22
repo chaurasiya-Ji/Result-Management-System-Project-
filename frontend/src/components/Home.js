@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-      <div className="nav">
+      <div className="my-nav bg-primary"> 
         <h2>LATEST NEWS</h2>
       </div>
       <div className="container">
-        <div className="side-left">
+        <div className="side-left ">
           <h2>Current Events</h2>
           <div className="inner-left">
             <ul typeof="">
