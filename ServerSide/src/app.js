@@ -19,13 +19,6 @@ app.use(express.static("public"));
 
 app.use(cookieParser());
 
-// app.use((req, res, next) => {
-// console.log("Headers:", req.headers);
-// console.log("Body:", req.body);
-// console.log("File:", req.file);
-//   next();
-// });
-
 //routs import
 import userRouter from "./routes/user.routs.js";
 
