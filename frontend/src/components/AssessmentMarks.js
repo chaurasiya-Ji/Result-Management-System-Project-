@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+
 
 const AssessmentMarks = () => {
   const [studentId, setStudentId] = useState("");
